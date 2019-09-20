@@ -37,9 +37,18 @@ function CharacterInfo({ items }) {
   return (
     <Link className="char-card" to={`/character/${id}`}>
       <div to={`/character/${id}`}>
-        <h1>Name: {name}</h1>
-        <h2>Species: {species}</h2>
-        <h2>Status: {status}</h2>
+        <h1>
+          <span className="badge badge-success">Name</span>:
+          <span className="badge-pill badge-info">{name}</span>
+        </h1>
+        <h2>
+          <span className="badge badge-success">Species</span>:
+          <span className="badge-pill badge-info">{species}</span>
+        </h2>
+        <h2>
+          <span className="badge badge-success">Status</span>:
+          <span className="badge-pill badge-info">{status}</span>
+        </h2>
       </div>
     </Link>
   );
