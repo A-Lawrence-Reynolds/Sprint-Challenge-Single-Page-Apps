@@ -8,10 +8,10 @@ const CharacterList = props => {
   useEffect(() => {
     const getcharacters = () => {
       axios
-        .get("https://rick-api.herokuapp.com/api/")
+        .get("https://rickandmortyapi.com/api/character/")
         .then(response => {
-          console.log(response);
-          setCharacter(response);
+          console.log(response.data.results);
+          setCharacter(response.data.results);
         })
         .catch(error => {
           console.log("houston we have a problem", error);
@@ -22,6 +22,6 @@ const CharacterList = props => {
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, []);
 
-  return <section className="character-list">{}</section>;
+  return <section className="character-list">{setCharacter}</section>;
 };
 export default CharacterList;
