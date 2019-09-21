@@ -37,3 +37,10 @@ main {
 header h1 {
   text-align: center;
 }
+.character-list > .char-card > div {
+  padding: 10px;
+  background: gray;
+  width: 65%;
+  border-radius: 5px;
+  margin: 15px;
+}
